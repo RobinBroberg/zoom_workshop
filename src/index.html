@@ -10,11 +10,11 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="font-sans text-gray-800">
-    <header class="bg-white shadow-md sticky top-0 z-50">
+  <body>
+    <header class="bg-white shadow-md sticky top-0">
       <div class="container mx-auto flex justify-between items-center p-4">
         <div class="flex items-center">
-          <a href="#" class="text-xl font-bold text-blue-600 mr-12">
+          <a href="#" class="w-28 h-auto mr-12">
             <img src="./images/zoom-logo.svg" alt="zoom-logo" />
           </a>
 
@@ -37,35 +37,17 @@
         </div>
 
         <div class="flex items-center">
-          <button
-            class="lg:hidden text-slate-600 hover:text-blue-600"
-            onclick="toggleMenu()"
+          <nav
+            class="hidden md:flex lg:flex space-x-4 font-almaden items-center"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
-            </svg>
-          </button>
-
-          <nav class="hidden lg:flex space-x-4 font-almaden items-center">
             <a
               href="#"
-              class="px-4 py-2 text-nowrap text-center bg-white text-customBlue rounded-2xl hover:bg-blue-100 border border-customBlue font-bold ml-2"
+              class="px-4 py-2 text-nowrap text-center bg-white text-customBlue rounded-3xl hover:bg-blue-100 border border-customBlue font-bold ml-2"
               >Contact Sales</a
             >
             <a
               href="#"
-              class="px-4 py-2 text-nowrap text-center bg-blue-500 text-white rounded-2xl hover:bg-blue-700 font-bold"
+              class="px-4 py-2 text-nowrap text-center bg-blue-500 text-white rounded-3xl hover:bg-blue-700 font-bold"
               >Sign up free</a
             >
             <a
@@ -85,52 +67,62 @@
             >
           </nav>
         </div>
+        <button
+          class="lg:hidden text-slate-600 hover:text-blue-600"
+          onclick="toggleMenu()"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
 
       <div
-        class="hidden lg:hidden bg-white items-center text-wrap"
+        class="hidden lg:hidden bg-white items-center text-wrap ml-2"
         id="mobile-menu"
       >
-        <a href="#" class="text-slate-600 hover:text-blue-600 font-bold"
-          >Products</a
-        >
-        <a href="#" class="text-slate-600 hover:text-blue-600 font-bold"
-          >Solutions</a
-        >
-        <a href="#" class="text-slate-600 hover:text-blue-600 font-bold"
-          >Resources</a
-        >
-        <a href="#" class="text-slate-600 hover:text-blue-600 font-bold"
-          >Plans & pricing</a
-        >
-        <a
-          href="#"
-          class="px-4 py-2 bg-white text-customBlue rounded-2xl hover:bg-blue-100 border border-customBlue font-bold"
-          >Contact Sales</a
-        >
-        <a
-          href="#"
-          class="px-4 py-2 bg-customBlue text-white rounded-2xl hover:bg-blue-700 font-bold"
-          >Sign up free</a
-        >
-        <a href="#" class="text-slate-800 hover:text-blue-600 font-bold"
-          >Join</a
-        >
-        <a href="#" class="text-slate-800 hover:text-blue-600 font-bold"
-          >Host</a
-        >
-        <a href="#" class="text-slate-800 hover:text-blue-600 font-bold"
-          >Sign in</a
-        >
+        <nav class="mb-3">
+          <a href="#" class="text-slate-600 hover:text-blue-600 font-bold"
+            >Products</a
+          >
+          <a href="#" class="text-slate-600 hover:text-blue-600 font-bold"
+            >Solutions</a
+          >
+          <a href="#" class="text-slate-600 hover:text-blue-600 font-bold"
+            >Resources</a
+          >
+          <a href="#" class="text-slate-600 hover:text-blue-600 font-bold"
+            >Plans & pricing</a
+          >
+        </nav>
+        <nav class="md:hidden pb-4">
+          <a
+            href="#"
+            class="px-4 py-2 bg-white text-customBlue rounded-2xl hover:bg-blue-100 border border-customBlue font-bold"
+            >Contact Sales</a
+          >
+          <a
+            href="#"
+            class="px-4 py-2 bg-customBlue text-white rounded-2xl hover:bg-blue-700 font-bold"
+            >Sign up free</a
+          >
+          <a href="#" class="text-slate-800 hover:text-blue-600 font-bold"
+            >Join</a
+          >
+          <a href="#" class="text-slate-800 hover:text-blue-600 font-bold"
+            >Host</a
+          >
+          <a href="#" class="text-slate-800 hover:text-blue-600 font-bold"
+            >Sign in</a
+          >
+        </nav>
       </div>
     </header>
 
-    <section class="text-slate-800 md:py-10 py-5 px-5">
+    <section class="text-slate-800 md:pt-10 md:pb-8 py-5 px-5">
       <div
         class="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-8"
       >
         <div
-          class="text-center md:text-left font-almaden max-w-lg mx-auto md:mx-0"
+          class="text-center md:text-left font-almaden max-w-lg mx-auto md:mx-20"
         >
           <h1 class="text-4xl md:text-5xl font-bold mb-4">
             The AI-first work platform for human connection
@@ -153,7 +145,7 @@
           </div>
         </div>
 
-        <div class="flex justify-center">
+        <div class="flex justify-center relative top-8">
           <img
             src="./images/hero.jpg"
             alt="Hero image"
@@ -164,7 +156,9 @@
     </section>
 
     <section class="py-16">
-      <div class="grid grid-cols-1 md:grid-cols-3 bg-customDarkBlue py-10">
+      <div
+        class="grid grid-cols-1 md:grid-cols-[1fr,1.5fr,1.5fr] bg-customDarkBlue py-10"
+      >
         <div class="flex flex-col items-center text-center">
           <img src="./images/zoomlogo.png" alt="logo" class="my-16" />
           <h2
@@ -172,25 +166,25 @@
           >
             The AI-first work platform for human connection
           </h2>
-          <div class="flex flex-col mt-5 font-almaden">
+          <div class="flex flex-col mt-5 font-almaden text-slate-100">
             <a
               href="#"
-              class="px-6 py-2 mb-5 border border-blue-500 bg-blue-400 bg-opacity-25 text-white font-bold rounded-3xl hover:bg-blue-900"
+              class="px-6 py-2 mb-5 border border-blue-500 bg-blue-400 bg-opacity-25 font-bold rounded-3xl hover:bg-blue-900"
               >Zoom Workplace</a
             >
             <a
               href="#"
-              class="px-6 py-2 mb-5 border border-customBlue bg-cyan-300 bg-opacity-25 text-white font-bold rounded-3xl hover:bg-blue-950"
+              class="px-6 py-2 mb-5 border border-cyan-400 bg-cyan-300 bg-opacity-25 font-bold rounded-3xl hover:bg-cyan-700 hover:bg-opacity-60"
               >AI Companion</a
             >
             <a
               href="#"
-              class="px-6 py-2 mb-5 border border-orange-400 bg-orange-300 bg-opacity-25 text-white font-bold rounded-3xl hover:bg-blue-950"
+              class="px-6 py-2 mb-5 border border-orange-400 bg-orange-300 bg-opacity-25 font-bold rounded-3xl hover:bg-orange-900 hover:bg-opacity-75"
               >Business Services</a
             >
             <a
               href="#"
-              class="px-6 py-2 mb-5 border border-rose-400 bg-rose-300 bg-opacity-25 text-white font-bold rounded-3xl hover:bg-blue-950"
+              class="px-6 py-2 mb-5 border border-rose-400 bg-rose-300 bg-opacity-25 font-bold rounded-3xl hover:bg-rose-900 hover:bg-opacity-75"
               >Developer Ecosystem</a
             >
           </div>
@@ -204,7 +198,7 @@
           />
         </div>
 
-        <div class="text-center md:text-left text-slate-100 font-almaden">
+        <div class="text-center md:text-left text-slate-100 font-almaden mr-10">
           <img
             src="./images/product-zoom-workplace.svg"
             alt=""
@@ -217,49 +211,51 @@
             <a href="#" class="text-blue-500 hover:underline">Learn more</a>
           </p>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 ml-5 md:ml-0">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-y-4 ml-5 md:ml-0 text-lg"
+          >
             <div class="flex items-center">
-              <i class="fa-solid fa-video text-blue-500 w-6 h-6 mr-3"></i>
+              <i class="fa-solid fa-video text-blue-500 fa-fw mr-3"></i>
               <a href="#" class="font-bold hover:underline">Meetings</a>
             </div>
             <div class="flex items-center">
-              <i class="fa-solid fa-chart-line text-blue-500 w-6 h-6 mr-3"></i>
+              <i class="fa-solid fa-chart-line text-blue-500 fa-fw mr-3"></i>
               <a href="#" class="font-bold hover:underline">Productivity</a>
             </div>
             <div class="flex items-center">
-              <i class="fa-solid fa-comments text-blue-500 w-6 h-6 mr-3"></i>
+              <i class="fa-solid fa-comments text-blue-500 fa-fw mr-3"></i>
               <a href="#" class="font-bold hover:underline">Team Chat</a>
             </div>
             <div class="flex items-center">
-              <i class="fa-solid fa-heart text-blue-500 w-6 h-6 mr-3"></i>
+              <i class="fa-solid fa-heart text-blue-500 fa-fw mr-3"></i>
               <a href="#" class="font-bold hover:underline"
                 >Employee Engagement</a
               >
             </div>
             <div class="flex items-center">
-              <i class="fa-solid fa-phone text-blue-500 w-6 h-6 mr-3"></i>
+              <i class="fa-solid fa-phone text-blue-500 fa-fw mr-3"></i>
               <a href="#" class="font-bold hover:underline">Phone</a>
             </div>
             <div class="flex items-center">
-              <i class="fa-solid fa-desktop text-blue-500 w-6 h-6 mr-3"></i>
+              <i class="fa-solid fa-desktop text-blue-500 fa-fw mr-3"></i>
               <a href="#" class="font-bold hover:underline"
                 >Flexible Workspaces</a
               >
             </div>
             <div class="flex items-center">
-              <i class="fa-solid fa-envelope text-blue-500 w-6 h-6 mr-3"></i>
+              <i class="fa-solid fa-envelope text-blue-500 fa-fw mr-3"></i>
               <a href="#" class="font-bold hover:underline">Mail & Calendar</a>
             </div>
             <div class="flex items-center">
-              <i class="fa-solid fa-users text-blue-500 w-6 h-6 mr-3"></i>
+              <i class="fa-solid fa-users text-blue-500 fa-fw mr-3"></i>
               <a href="#" class="font-bold hover:underline">Workvivo</a>
             </div>
             <div class="flex items-center">
-              <i class="fa-solid fa-calendar text-blue-500 w-6 h-6 mr-3"></i>
+              <i class="fa-solid fa-calendar text-blue-500 fa-fw mr-3"></i>
               <a href="#" class="font-bold hover:underline">Scheduler</a>
             </div>
             <div class="flex items-center">
-              <i class="fa-solid fa-store text-blue-500 w-6 h-6 mr-3"></i>
+              <i class="fa-solid fa-store text-blue-500 fa-fw mr-3"></i>
               <a href="#" class="font-bold hover:underline">App Marketplace</a>
             </div>
           </div>
@@ -267,11 +263,74 @@
       </div>
     </section>
 
-    <section class="py-16 bg-white">
-      <div class="container mx-auto text-center"></div>
+    <section class="py-16 px-5 bg-white text-slate-800 font-almaden">
+      <div
+        class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
+      >
+        <div class="mx-5 md:mx-16">
+          <h1 class="text-3xl md:text-4xl font-bold mb-4">
+            Powering organizations across industries and geographies
+          </h1>
+          <p class="text-lg text-slate-600 mb-6">
+            Zoom helps consolidate communications, connect people, and
+            collaborate better together in the boardroom, classroom, operating
+            room, and everywhere in between.
+          </p>
+          <a
+            href="#"
+            class="px-6 py-3 bg-cyan-500 text-white font-bold rounded-full hover:bg-cyan-600"
+          >
+            Explore Industry Solutions
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 md:ml-10">
+          <div
+            class="flex flex-col items-center text-slate-800 justify-center border border-blue-200 hover:text-blue-600 rounded-xl p-6 text-center hover:cursor-pointer hover:shadow-lg hover:shadow-blue-300"
+          >
+            <i class="fa-solid fa-graduation-cap text-3xl mb-4"></i>
+            <p class="font-bold text-2xl">Education</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center text-slate-800 justify-center border border-blue-200 hover:text-blue-600 rounded-xl p-6 text-center hover:cursor-pointer hover:shadow-lg hover:shadow-blue-300"
+          >
+            <i class="fa-solid fa-sack-dollar text-3xl mb-4"></i>
+            <p class="font-bold text-2xl">Financial Services</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center text-slate-800 justify-center border border-blue-200 hover:text-blue-600 rounded-xl p-6 text-center hover:cursor-pointer hover:shadow-lg hover:shadow-blue-300"
+          >
+            <i class="fa-solid fa-landmark text-3xl mb-4"></i>
+            <p class="font-bold text-2xl">Government</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center text-slate-800 justify-center border border-blue-200 hover:text-blue-600 rounded-xl p-6 text-center hover:cursor-pointer hover:shadow-lg hover:shadow-blue-300"
+          >
+            <i class="fa-solid fa-hospital text-3xl mb-4"></i>
+            <p class="font-bold text-2xl">Healthcare</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center text-slate-800 justify-center border border-blue-200 hover:text-blue-600 rounded-xl p-6 text-center hover:cursor-pointer hover:shadow-lg hover:shadow-blue-300"
+          >
+            <i class="fa-solid fa-box text-3xl mb-4"></i>
+            <p class="font-bold text-2xl">Manufacturing</p>
+          </div>
+
+          <div
+            class="flex flex-col items-center text-slate-800 justify-center border border-blue-200 hover:text-blue-600 rounded-xl p-6 text-center hover:cursor-pointer hover:shadow-lg hover:shadow-blue-300"
+          >
+            <i class="fa-solid fa-tag text-3xl mb-4"></i>
+            <p class="font-bold text-2xl">Retail</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <footer class="bg-gray-800 text-gray-300 py-8 font-almaden">
+    <footer class="bg-customDarkBlue text-slate-100 py-8 font-almaden">
       <div
         class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left"
       >
@@ -287,12 +346,28 @@
             <li><a href="#" class="hover:underline">Contact</a></li>
           </ul>
         </div>
-        <div>
-          <h3 class="text-lg font-bold text-white">Follow Us</h3>
+
+        <div class="flex justify-center flex-col">
+          <h3 class="text-lg font-bold text-slate-100">Follow Us</h3>
           <ul class="text-sm mt-2 space-y-2">
-            <li><a href="#" class="hover:underline">Twitter</a></li>
-            <li><a href="#" class="hover:underline">LinkedIn</a></li>
-            <li><a href="#" class="hover:underline">Facebook</a></li>
+            <li class="">
+              <a href="#" class="hover:underline"
+                ><i class="fa-brands fa-twitter fa-fw text-blue-500 mr-2"></i>
+                Twitter</a
+              >
+            </li>
+            <li class="">
+              <a href="#" class="hover:underline"
+                ><i class="fa-brands fa-linkedin fa-fw text-blue-500 mr-2"></i>
+                LinkedIn</a
+              >
+            </li>
+            <li class="">
+              <a href="#" class="hover:underline"
+                ><i class="fa-brands fa-facebook fa-fw text-blue-500 mr-2"></i>
+                Facebook</a
+              >
+            </li>
           </ul>
         </div>
       </div>
